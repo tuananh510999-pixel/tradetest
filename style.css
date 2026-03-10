@@ -1,0 +1,126 @@
+body{
+margin:0;
+font-family:Arial;
+background:#0f172a;
+color:white;
+}
+
+/* TOP BAR */
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px;
+background:#111827;
+font-size:16px;
+}
+
+/* ACCOUNT INFO */
+
+.account{
+display:flex;
+justify-content:space-around;
+padding:10px;
+background:#1f2937;
+font-size:14px;
+}
+
+/* CHART */
+
+#chart{
+height:420px;
+width:100%;
+}
+
+/* ORDER PANEL */
+
+.order{
+padding:12px;
+background:#0f172a;
+}
+
+.lot{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:10px;
+}
+
+.lot button{
+padding:6px 12px;
+font-size:16px;
+border:none;
+background:#374151;
+color:white;
+border-radius:4px;
+}
+
+/* TP SL */
+
+.sl{
+display:flex;
+gap:10px;
+}
+
+.sl input{
+width:90px;
+padding:6px;
+border-radius:4px;
+border:none;
+}
+
+/* BUTTONS */
+
+.buttons{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+}
+
+.buttons button{
+flex:1;
+padding:20px;
+font-size:18px;
+border:none;
+font-weight:bold;
+}
+
+/* BUY SELL */
+
+.buy{
+background:#16a34a;
+color:white;
+}
+
+.sell{
+background:#dc2626;
+color:white;
+}
+
+.close{
+background:#f59e0b;
+color:black;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.account{
+flex-wrap:wrap;
+gap:5px;
+font-size:12px;
+}
+
+#chart{
+height:300px;
+}
+
+.buttons button{
+padding:16px;
+font-size:16px;
+}
+
+}

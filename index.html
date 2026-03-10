@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>XAUUSD Trade</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://s3.tradingview.com/tv.js"></script>
+
+</head>
+
+<body>
+
+<div class="top">
+
+<div>
+<b>XAUUSD / TRADE</b>
+</div>
+
+<div id="priceBox">
+<span id="price">5176.710</span> USD
+<span id="change">+0.76%</span>
+</div>
+
+</div>
+
+<div class="account">
+
+<div>Giá vốn: <b>$100</b></div>
+
+Số dư: <b id="balance">$100</b>
+Tài sản: <b id="equity">$100</b>
+Lãi/Lỗ: <b id="pnl">$0</b>
+
+</div>
+
+<div class="positions">
+
+<div class="posHeader">
+<span>Type</span>
+<span>Lot</span>
+<span>Entry</span>
+<span>PnL</span>
+<span></span>
+</div>
+
+<div id="tradeBox"></div>
+
+</div>
+
+<div id="chart"></div>
+
+<div class="order">
+
+<div class="lot">
+
+<button onclick="lotDown()">-</button>
+
+<input id="lot" type="number" step="0.01" value="0.01">
+
+<button onclick="lotUp()">+</button>
+
+Lot
+
+</div>
+
+<div class="sl">
+
+TP <input id="tp" type="number">
+
+SL <input id="sl" type="number">
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="sell" onclick="confirmTrade('sell')">
+BÁN
+<div id="sellPrice">0.000</div>
+</button>
+
+<button class="buy" onclick="confirmTrade('buy')">
+MUA
+<div id="buyPrice">0.000</div>
+</button>
+
+<script src="script.js"></script>
+
+<script>
+
+new TradingView.widget({
+
+container_id: "chart",
+
+symbol: "OANDA:XAUUSD",
+
+interval: "1",
+
+theme: "dark",
+
+style: "1",
+
+locale: "vi",
+
+autosize: true
+
+})
+
+</script>
+
+<div id="confirmBox" class="confirmBox">
+
+<div class="confirmContent">
+
+<h3 id="confirmTitle"></h3>
+
+<div id="confirmPrice"></div>
+
+<div class="confirmBtns">
+
+<button onclick="doTrade()">Xác Nhận</button>
+<button onclick="closeConfirm()">Huỷ</button>
+
+</div>
+
+</div>
+
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
