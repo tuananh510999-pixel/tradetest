@@ -11,6 +11,7 @@ app.use(express.static(__dirname))
 
 let price = 5176
 let trend = 0
+let spread = 0.30   // spread giống broker
 
 setInterval(()=>{
 
@@ -32,8 +33,13 @@ if(trend < -0.5) trend = -0.5
 
 app.get("/price",(req,res)=>{
 
+let buy = price + spread/2
+let sell = price - spread/2
+
 res.json({
-price: price
+price: parseFloat(price.toFixed(3)),
+buy: parseFloat(buy.toFixed(3)),
+sell: parseFloat(sell.toFixed(3))
 })
 
 })
